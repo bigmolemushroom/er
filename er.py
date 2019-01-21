@@ -108,7 +108,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
     plt.figure(1)
     plt.plot(list(range(dRange[0],dRange[1]+1)), eigVals)
     #plt.plot(list(range(dRange[0],dRange[1]+1)), eigVals, list(range(dRange[0],dRange[1]+1)), bounds)
-    plt.title('n=' + str(nodeNum) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
+    plt.title('n=' + str(nodeNum) + ', p=' + str(prob) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
     plt.ylabel('Second lagest eigenvalue')
     plt.xlabel('size of group exchange (d)')
     plt.savefig(fileName[0], format='eps', dpi=1000)
@@ -117,7 +117,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
     # plot the value -1/(log(lambda_2(W))) which is proportional to the bounds on the averaging time (for any given epsilon)
     plt.figure(2)
     plt.plot(list(range(dRange[0],dRange[1]+1)), bounds)
-    plt.title('n=' + str(nodeNum) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
+    plt.title('n=' + str(nodeNum) + ', p=' + str(prob) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
     plt.ylabel('Bound')
     plt.xlabel('size of group exchange (d)')
     plt.savefig(fileName[1], format='eps', dpi=1000)
@@ -127,7 +127,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
 
 
 def main():
-    ERBoundScaleWithD(nodeNum = 100, prob = 0.4, dRange = [2,50], fileName=['ERFigure3-1.eps', 'ERFigure3-2.eps'])
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.2, dRange = [2,50], fileName=['ERFigure1-1.eps', 'ERFigure1-2.eps'])
 
 
 if(__name__ == '__main__'):
