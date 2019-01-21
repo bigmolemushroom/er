@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-SAMPLE_NUM = 50
+SAMPLE_NUM = 100
 
 # Check if the graph corresponding to the adjacency matrix is connected
 def isConn(adjMat):
@@ -201,7 +201,7 @@ def ERBoundScaleWithN(nRange, prob, d, fileName):
 
 def main():
     #ERBoundScaleWithD(nodeNum = 100, prob = 0.4, dRange = [2,50], fileName=['ERFigure3-1.eps', 'ERFigure3-2.eps'])
-    ERBoundScaleWithN(nRange = [20, 200, 10], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
+    ERBoundScaleWithN(nRange = [20, 200, 20], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
 
 
 if(__name__ == '__main__'):
