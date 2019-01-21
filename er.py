@@ -127,7 +127,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
 
 
 def main():
-    ERBoundScaleWithD(nodeNum = 100, prob = 0.2, dRange = [2,30], fileName=['ERFigure1-1.eps', 'ERFigure1-2.eps'])
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.5, dRange = [2,60], fileName=['ERFigure2-1.eps', 'ERFigure2-2.eps'])
 
 
 if(__name__ == '__main__'):
