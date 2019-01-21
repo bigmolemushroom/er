@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-SAMPLE_NUM = 100
+SAMPLE_NUM = 50
 
 # Check if the graph corresponding to the adjacency matrix is connected
 def isConn(adjMat):
@@ -31,9 +31,10 @@ def genConnAdjMat(nodeNum, prob, minDeg):
     # adjacency matrix
     while(True):
         A = np.random.rand(nodeNum, nodeNum)
-        A = A + np.transpose(A)
-        np.fill_diagonal(A, 3)
-        A = A < 2*prob
+        A = np.triu(A)
+        np.fill_diagonal(A, 0)
+        A = A > 1-prob
+        A += A.T
 
         if(isConn(A) and degreeAtLeast(A, minDeg)):
             return A
