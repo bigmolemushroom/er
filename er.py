@@ -200,7 +200,7 @@ def ERBoundScaleWithN(nRange, prob, d, fileName):
 
 
 def main():
-    ERBoundScaleWithD(nodeNum = 100, prob = 0.3, dRange = [2,50], fileName=['ERFigure6-1.eps', 'ERFigure2-3.eps'])
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.4, dRange = [2,50], fileName=['ERFigure6-1.eps', 'ERFigure3-3.eps'])
     #ERBoundScaleWithN(nRange = [20, 200, 20], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
 
 
