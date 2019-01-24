@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-SAMPLE_NUM = 100
+SAMPLE_NUM = 50
 
 # Check if the graph corresponding to the adjacency matrix is connected
 def isConn(adjMat):
