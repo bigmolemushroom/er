@@ -1,7 +1,7 @@
 from matplotlib import pyplot as plt
 import numpy as np
 
-SAMPLE_NUM = 100
+SAMPLE_NUM = 50
 
 # Check if the graph corresponding to the adjacency matrix is connected
 def isConn(adjMat):
@@ -103,7 +103,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
         WList[d] = WList[d] / SAMPLE_NUM
         lambda2 = np.sort(np.linalg.eigvals(WList[d]))[nodeNum-2]
         eigVals.append(lambda2)
-        bounds.append(-1/np.log(lambda2))
+        bounds.append(np.log(lambda2))
 
      # plot the second largest eigenvalues of W, e.g., lambda_2(W)
     plt.figure(1)
@@ -119,7 +119,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
     plt.figure(2)
     plt.plot(list(range(dRange[0],dRange[1]+1)), bounds)
     plt.title('n=' + str(nodeNum) + ', p=' + str(prob) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
-    plt.ylabel('Bound')
+    plt.ylabel('inverse of bound')
     plt.xlabel('size of group exchange (d)')
     plt.savefig(fileName[1], format='eps', dpi=1000)
     plt.show()
@@ -200,8 +200,8 @@ def ERBoundScaleWithN(nRange, prob, d, fileName):
 
 
 def main():
-    #ERBoundScaleWithD(nodeNum = 100, prob = 0.4, dRange = [2,50], fileName=['ERFigure3-1.eps', 'ERFigure3-2.eps'])
-    ERBoundScaleWithN(nRange = [20, 200, 20], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.2, dRange = [2,50], fileName=['ERFigure6-1.eps', 'ERFigure1-3.eps'])
+    #ERBoundScaleWithN(nRange = [20, 200, 20], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
 
 
 if(__name__ == '__main__'):
