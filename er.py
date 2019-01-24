@@ -294,7 +294,7 @@ def ERBoundScaleWithNSameK(nRange, k, d, fileName):
     plt.show()
 
 def main():
-    ERBoundScaleWithD(nodeNum = 100, prob = 0.2, dRange = [2,50], fileName='ERFigure01')
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.4, dRange = [2,50], fileName='ERFigure03')
     #ERBoundScaleWithN(nRange = [20, 200, 20], prob = 1, d = 3, fileName = 'ERFigure9.eps')
     #ERBoundScaleWithNSameK(nRange = [20, 200, 20], k = 10, d = 3, fileName = 'ERFigure8.eps')
 
