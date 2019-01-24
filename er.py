@@ -138,6 +138,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
 
     plt.figure(4)
     plt.plot(list(range(dRange[0],dRange[1]+1)), ratio[dRange[0]:])
+    plt.ylim(bottom = 0)
     plt.title('n=' + str(nodeNum) + ', p=' + str(prob) + ', d=[' + str(dRange[0]) + ':' + str(dRange[1]) + ']')
     plt.ylabel('(d-1) * bound')
     plt.xlabel('size of group exchange (d)')
