@@ -103,7 +103,7 @@ def ERBoundScaleWithD(nodeNum, prob, dRange, fileName):
         WList[d] = WList[d] / SAMPLE_NUM
         lambda2 = np.sort(np.linalg.eigvals(WList[d]))[nodeNum-2]
         eigVals.append(lambda2)
-        bounds.append(np.log(lambda2))
+        bounds.append(- np.log(lambda2))
 
      # plot the second largest eigenvalues of W, e.g., lambda_2(W)
     plt.figure(1)
@@ -200,7 +200,7 @@ def ERBoundScaleWithN(nRange, prob, d, fileName):
 
 
 def main():
-    ERBoundScaleWithD(nodeNum = 100, prob = 0.2, dRange = [2,50], fileName=['ERFigure6-1.eps', 'ERFigure1-3.eps'])
+    ERBoundScaleWithD(nodeNum = 100, prob = 0.3, dRange = [2,50], fileName=['ERFigure6-1.eps', 'ERFigure2-3.eps'])
     #ERBoundScaleWithN(nRange = [20, 200, 20], prob = 0.3, d = 3, fileName = 'ERFigure5.eps')
 
 
